@@ -1,26 +1,61 @@
-var usuario = parseInt(prompt("Cuál es tu peso?"));
-var peso = usuario ;
-var planeta = prompt("Elige tu Planeta\n 1 es Marte\n 2 es Jupiter");
-var g_tierra = 9.8;
-var g_marte = 3.7;
-var g_jupiter = 24.8;
-var peso_final;
-var nombre;
-if(planeta == 1)
+var user = parseInt(prompt("What is your weight?"));
+var weight = user ;
+var planet = prompt("Choose your planet\n1 es Mercurio\n2 es Venus\n3 es Marte\n4 es Jupiter\n5 es Saturno\n6 es Urano\n7 es Neptuno\n8 es Pluton");
+var g_mercurio = 3.7;
+var g_venus = 8.87;
+var g_tierra = 9.807;
+var g_marte = 3.721;
+var g_jupiter = 24.79;
+var g_saturno = 10.44;
+var g_urano = 8.87;
+var g_neptuno = 11.15;
+var g_pluton = 0.62;
+var final_weight;
+var p_name;
+if(planet == 1)
 {
-    peso_final = peso * g_marte / g_tierra;
-    nombre = Marte;
+    final_weight = weight * g_mercurio / g_tierra;
+    p_name = "Mercurio";
 }
-else if(planeta == 2)
+else if(planet == 2)
 {
-    peso_final = peso * g_jupiter / g_tierra;
-    nombre = Jupiter;
+    final_weight = weight * g_venus / g_tierra;
+    p_name = "Venus";
 }
-else
+else if(planet == 3)
 {
-    peso_final = 5000;
+    final_weight = weight * g_marte / g_tierra;
+    p_name = "Marte";
 }
+else if(planet == 4)
+{
+    final_weight = weight * g_jupiter / g_tierra;
+    p_name = "Jupiter";
+}
+else if(planet == 5)
+{
+    final_weight = weight * g_saturno / g_tierra;
+    p_name = "Saturno";
+}
+else if(planet == 6)
+{
+    final_weight = weight * g_urano / g_tierra;
+    p_name = "Urano";
+}
+else if(planet == 7)
+{
+    final_weight = weight * g_neptuno / g_tierra;
+    p_name = "Neptuno";
+}
+else if(planet == 8)
+{
+    final_weight = weight * g_pluton / g_tierra;
+    p_name = "Pluton";
+}
+else(planet != 1,2,3,4,5,6,7,8)
+{
+ p_name = FatWorld;
+}
+final_weight = parseInt(final_weight);
 
-peso_final = parseInt(peso_final);
-
-document.write("Tu peso en "+nombre+" es <strong>"+peso_final+"</strong> Kg");
+document.write("Your Weight On "+ p_name +" Is <strong>"+final_weight+"</strong> Kg");
