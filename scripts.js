@@ -52,10 +52,6 @@ else if(planet == 8)
     final_weight = weight * g_pluton / g_tierra;
     p_name = "Pluton";
 }
-else(planet != 1,2,3,4,5,6,7,8)
-{
- p_name = FatWorld;
-}
 final_weight = parseInt(final_weight);
 
 document.write("Your Weight On "+ p_name +" Is <strong>"+final_weight+"</strong> Kg");
